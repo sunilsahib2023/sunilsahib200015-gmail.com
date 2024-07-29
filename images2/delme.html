@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+ 
+
+
+<body ng-app="sk" ng-controller="skc"  ng-init="c=0" >
+<h1 >{{c}}</h1>
+<h1 >{{m}}</h1>
+
+
+<script>
+m = angular.module("sk",[])
+m.controller("skc",function($scope,$http)
+{
+$scope.d = 101
+   $http.get("angula_filter_in_table.html").then(function(response)
+	{
+	$scope.m = response.data
+	});
+
+
+
+});
+
+document.title = "Ready"
+</script>
+
+
+</body>
+</html>

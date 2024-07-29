@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head></head>
+
+
+<body>
+
+<div id="m" style="position:absolute">Help</div>
+
+<script>
+
+var d ;
+
+function tip(event,h)
+{
+s = h
+document.title=event.x+":"+event.y
+d = document.createElement("div")
+document.body.appendChild(d)
+d.style='position:absolute'
+d.style.fontSize="40px"
+d.style.background="Teal"
+d.style.padding="10px"
+d.style.boxShadow="10px 10px 10px gray"
+d.style.borderRadius="100px"
+d.style.cursor="pointer"
+d.style.color="white"
+d.style.transition="2s"
+d.innerHTML=s
+
+d.style.left = event.clientX-100+"px"
+d.style.top = event.clientY+"px"
+}
+
+function hide()
+{
+document.body.removeChild(d)
+}
+
+
+
+
+
+</script>
+<h1>This is the text for pagex and pageY <h1/>
+<p>
+1 Working group 1</br>
+2 Animal Kingdom</br>
+3 Nature for All</br>
+4 World Wide Web </br>
+</p>
+
+<img src="images/p2.jpg" width="300" height="300" onmouseout="hide()" onmouseover="tip(event,'Sea Animal')">
+
+</body>
+</html>

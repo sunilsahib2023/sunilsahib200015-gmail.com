@@ -1,0 +1,95 @@
+<!dotype html>
+<html>
+
+<body>
+
+
+
+<script>
+
+
+
+p = new Array("images/p0.jpg","images/p1.jpg","images/p2.jpg","images/p3.jpg","images/p4.jpg","images/p5.jpg");
+
+L = p.length-1
+pic = new Array(L)
+
+for(i= 0;i<=L;i++)
+{
+pic[i]= document.createElement("img")
+pic[i].src = p[i];
+pic[i].style="transition:2s ease-out;opacity:1;width:1000;height:400;box-shadow:10px 10px 10px gray;position:absolute;top:0px;left:200px;"
+
+document.body.appendChild(pic[i]);
+}
+
+
+
+i=0
+k=6
+function run()
+{
+
+   switch(k){
+           case 5:
+           pic[5].style.opacity = "0"
+            pic[4].style.opacity = "1"
+
+           break;
+    
+
+
+ 	   case 4:
+           pic[4].style.opacity = "0"
+ pic[3].style.opacity = "1"
+
+           break;
+
+           case 3:
+           pic[3].style.opacity = "0"
+ pic[2].style.opacity = "1"
+
+           break;
+
+
+           case 2:
+           pic[2].style.opacity = "0"
+ pic[1].style.opacity = "1"
+           break;
+
+
+	   case 1:
+           pic[1].style.opacity = "0"
+ pic[0].style.opacity = "1"
+           break;
+
+          case 0:
+           pic[0].style.opacity = "0"
+ pic[5].style.opacity = "1"
+           break;
+
+
+
+  }
+
+if(k>0){k--}else{k=5}
+
+document.title = k
+
+setTimeout("run()",5000)
+
+}
+
+
+
+onload = run
+
+
+</script>
+
+
+
+</body>
+
+
+</html>

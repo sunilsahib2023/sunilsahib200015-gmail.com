@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+  <h1> $location services in Angular js : eg url, protocal, host and port </h1>
+
+    <div ng-app="sk" ng-controller="skc">
+     
+        <h3>Present Url : {{myUrl}}</h3>
+        <h3>Present protocol : {{protocol}}</h3>
+        <h3>Present host : {{host}}</h3>
+        <h3>Present port : {{port}}</h3>
+        <h3>Present path : {{path}}</h3>
+    </div>
+    <script>
+        var app = angular.module("sk", []);
+        app.controller("skc", function($scope,$location)
+	 {
+            $scope.myUrl = $location.absUrl();
+            $scope.protocol = $location.protocol();
+            $scope.host = $location.host();
+            $scope.port = $location.port();
+            $scope.path = $location.path();
+
+        });
+    </script>
+
+
+</body>
+</html>

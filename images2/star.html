@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<style>
+div{cursor:pointer;font-size:90px;float:left;color:gray;display:block;width:50px;height:70px;margin-right:10px;background:lime;box-shadow:10px 10px 10px gray;}
+</style>
+<body style="margin:20px">
+<form action = "Save.php" Method="post">
+<h2 style="color:purple;font-size:30px"> Star Rating :- <input type="text"  id="rate" value="5" style="font-family:arial black;border:0px;color:purple;font-size:30px" name="rate">  </h2>
+	
+<div id="1">*</div>
+<div id="2">*</div>
+<div id="3">*</div>
+<div id="4">*</div>
+<div id="5">*</div>
+
+<script>
+totalstar = ""
+r = document.getElementById("rate")
+
+document.title="No Error"
+
+s1 = document.getElementById("1");s2 = document.getElementById("2");s3 = document.getElementById("3");s4 = document.getElementById("4")
+s5 = document.getElementById("5")
+s5.style.color=s4.style.color=s3.style.color=s2.style.color=s1.style.color="Gray";
+
+r.value=totalstar
+
+s1.onclick = function()
+{s1.style.color="orange";
+s2.style.color=s3.style.color=s4.style.color=s5.style.color="gray";document.title=totalstar;
+totalstar = 1;r.value=1}
+
+s2.onclick = function()
+{s1.style.color="orange";s2.style.color="orange";
+s3.style.color=s4.style.color=s5.style.color="gray";
+totalstar = 2;document.title=totalstar;r.value=2;}
+
+s3.onclick = function()
+{s1.style.color="orange";s2.style.color="orange";s3.style.color="orange";
+s5.style.color="gray";s4.style.color="gray"
+totalstar = 3;document.title=totalstar;r.value=3;}
+
+s4.onclick = function()
+{s1.style.color="orange";s2.style.color="orange";s3.style.color="orange";s4.style.color="orange"
+s5.style.color="gray"
+totalstar = 4;document.title=totalstar;r.value=4;}
+
+s5.onclick = function()
+{s1.style.color="orange";s2.style.color="orange";s3.style.color="orange";s4.style.color="orange"
+s5.style.color="orange"
+totalstar = 5;document.title=totalstar;r.value=5;}
+
+
+
+
+
+
+
+</script>
+<br/><br/><br/><br/><br/><br/>
+
+<input type="submit"  value="Submit Your Rating">
+</form>
+</div>
+</body>
+</html>

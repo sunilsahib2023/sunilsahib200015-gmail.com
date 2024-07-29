@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+
+<body>
+
+
+
+
+<form name="form1" method="post" action="upload2.htm"  onsubmit="return(sk())">
+  <table width="200" border="0">
+    <tr>
+      <td>Password</td>
+      <td><label for="textfield"></label>
+      <input type="password" name="pass" id="textfield"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="send">
+      <input type="reset" name="button2" id="button2" value="Reset"></td>
+    </tr>
+  </table>
+</form>
+
+<script>
+function sk()
+{
+	
+ if( document.form1.pass.value == "Tectonaa@123" )
+         {
+            
+			alert("Valid user or password")
+            return true
+			
+		 }
+		 else
+		 {
+			alert("Error:- only admin is allowed  or Invalid pass"); 
+			 document.form1.pass.focus() ;
+             return false
+			 
+		 }
+
+}
+</script>
+
+</body>
+</html>

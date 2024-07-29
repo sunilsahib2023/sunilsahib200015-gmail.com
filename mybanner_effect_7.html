@@ -1,0 +1,144 @@
+<!dotype html>
+<html>
+
+<body>
+
+
+
+<script>
+
+
+
+p = new Array("images/p0.jpg","images/p1.jpg","images/p2.jpg","images/p3.jpg","images/p4.jpg","images/p5.jpg");
+
+mt = new Array("WE OFFER BEAUTY OF NATURE","INCRDIBLE WILD INDIA","GREEN INDIA","EXPLORE FROM THE HILL OF HIMALAYA","NATION OF COLOR","WELCOME TO NATURE");
+
+
+message = new Array(4)
+r = 20
+for(j=0;j<=mt.length-1;j++)
+{
+message[j] =  document.createElement("div")
+message[j].style="Color:red;font-size:50px;font-family:Arial Black;position:absolute;top:600px;transition:2s;z-index:20;top:0px;left:-1500px"
+message[j].innerHTML=mt[j]
+document.body.appendChild(message[j])
+
+}
+
+
+
+
+
+
+
+
+L = p.length-1
+pic = new Array(L)
+
+for(i= 0;i<=L;i++)
+{
+pic[i]= document.createElement("img")
+pic[i].src = p[i];
+pic[i].style="transition:1s ease-out;opacity:1;width:1000;height:400;box-shadow:10px 10px 10px gray;position:absolute;top:0px;left:200px;transition-origin:0%,50%"
+
+document.body.appendChild(pic[i]);
+}
+
+
+
+i=0
+k=6
+function run()
+{
+
+   switch(k){
+           case 5:
+           pic[5].style.width = "0px"
+           pic[4].style.width = "1000px"
+           message[5].style.left = "300px"
+           message[0].style.fontSize="100px"
+           message[0].style.opacity="0"
+    
+           break;
+    
+
+
+           case 4:
+           pic[4].style.width = "0px"
+           pic[3].style.width = "1000px"
+           message[4].style.left = "300px"
+           message[5].style.fontSize="100px"
+           message[5].style.opacity="0"
+             break;
+
+           case 3:
+           pic[3].style.width = "0px"
+           pic[2].style.width = "1000px"
+           message[3].style.left = "300px"
+           message[4].style.fontSize="100px"
+           message[4].style.opacity="0"
+    
+           break;
+
+
+           case 2:
+           pic[2].style.width = "0px"
+ pic[1].style.width = "1000px"
+message[2].style.left = "300px"
+           message[3].style.fontSize="100px"
+           message[3].style.opacity="0"
+    
+
+           break;
+
+
+	   case 1:
+           pic[1].style.width = "0px"
+ pic[0].style.width = "1000px"
+message[1].style.left = "300px"
+           message[2].style.fontSize="100px"
+           message[2].style.opacity="0"
+    
+           break;
+
+          case 0:
+           pic[0].style.width = "0px"
+ pic[5].style.width = "1000px"
+message[0].style.left = "300px"
+           message[1].style.fontSize="100px"
+           message[1].style.opacity="0"
+               break;
+          
+	 case 6:
+        for(t=0;t<=5;t++)
+        {
+          message[t].style.left = "-1500px"
+          message[t].style.fontSize="50px"
+          message[t].style.opacity="1"
+         }
+	break;
+
+  }
+
+
+if(k>0){k--}else{k=6}
+
+document.title = k
+
+setTimeout("run()",5000)
+
+}
+
+
+
+onload = run
+
+
+</script>
+
+
+
+<div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_sunilsahib200015net23net&utm_content=footer_img"><img src="https://cloud.githubusercontent.com/assets/23024110/20663010/9968df22-b55e-11e6-941d-edbc894c2b78.png"  alt="www.000webhost.com"></a></div></body>
+
+
+</html>
